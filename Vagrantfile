@@ -16,6 +16,8 @@ Vagrant.configure("2") do |config|
   config.ssh.forward_agent = true
 
   config.vm.provider :virtualbox do |v|
+    v.customize ["modifyvm", :id, "--cpus", 2]
+
     # This setting gives the VM 1024MB of RAM instead of the default 384.
     v.customize ["modifyvm", :id, "--memory", [ENV['DISCOURSE_VM_MEM'].to_i, 1024].max]
 
@@ -24,8 +26,8 @@ Vagrant.configure("2") do |config|
     v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
   end
 
-  config.vm.network :forwarded_port, guest: 3000, host: 4000
-  config.vm.network :forwarded_port, guest: 1080, host: 4080 # Mailcatcher
+  config.vm.network :forwarded_port, guest: 3000, host: 4001
+  config.vm.network :forwarded_port, guest: 1080, host: 4081 # Mailcatcher
 
   nfs_setting = RUBY_PLATFORM =~ /darwin/ || RUBY_PLATFORM =~ /linux/
   config.vm.synced_folder ".", "/vagrant", id: "vagrant-root", :nfs => nfs_setting
