@@ -1,5 +1,5 @@
 Discourse.HomeLogoComponent = Ember.Component.extend({
-    classNames: ["title"],
+    classNames: ["title",'roger-hack-home-logo'],
 
     linkUrl: function () {
         return Discourse.getURL("/");

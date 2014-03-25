@@ -32,6 +32,10 @@ Discourse.ApplicationRoute = Em.Route.extend({
       Discourse.Route.showModal(this, 'forgotPassword');
     },
 
+    showRogera: function() {
+        Discourse.Route.showModal(this, 'rogera');
+    },
+
     showNotActivated: function(props) {
       Discourse.Route.showModal(this, 'notActivated');
       this.controllerFor('notActivated').setProperties(props);

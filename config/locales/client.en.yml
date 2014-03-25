@@ -475,7 +475,8 @@ en:
       invite: "Enter your username or email address, and we'll send you a password reset email."
       reset: "Reset Password"
       complete: "If an account matches that username or email address, you should receive an email with instructions on how to reset your password shortly."
-
+    rogera:
+      action: "I want to see rogera's hack"
     login:
       title: "Log In"
       username: "Login"
