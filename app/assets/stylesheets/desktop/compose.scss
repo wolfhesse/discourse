@@ -443,6 +443,10 @@ div.ac-wrap {
   }
 }
 
+#reply-control.topic #wmd-quote-post {
+  display: none;
+}
+
 #reply-control {
   &.hide-preview {
     .wmd-controls {
@@ -542,11 +546,6 @@ div.ac-wrap {
       right: auto;
     }
   }
-}
-
-.admin-options-form {
-  display: none;
-  margin-top: -15px;
 }
 
 .auto-close-fields {

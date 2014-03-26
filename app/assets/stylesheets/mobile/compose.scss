@@ -358,6 +358,10 @@ div.ac-wrap {
   }
 }
 
+#reply-control.topic #wmd-quote-post {
+  display: none;
+}
+
 #reply-control {
 
 
@@ -454,11 +458,6 @@ div.ac-wrap {
       right: auto;
     }
   }
-}
-
-.admin-options-form {
-  margin-top: 8px;
-  display: none;
 }
 
 .auto-close-fields {
