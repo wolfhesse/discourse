@@ -17,6 +17,8 @@ Discourse::Application.routes.draw do
 
   get "site" => "site#index"
 
+  get 'etv' => 'etv#index'
+
   resources :forums
   get "srv/status" => "forums#status"
 
@@ -351,6 +353,7 @@ Discourse::Application.routes.draw do
   delete "draft" => "draft#destroy"
 
   get "robots.txt" => "robots_txt#index"
+
 
   Discourse.filters.each do |filter|
     root to: "list##{filter}", constraints: HomePageConstraint.new("#{filter}"), :as => "list_#{filter}"
